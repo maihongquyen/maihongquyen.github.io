@@ -1,15 +1,15 @@
 ---
 layout: page
-title: About
+title: Who am I?
 permalink: /about/
 ---
 
-Some information about you!
+Hé lô mọi người! 👋
+(2k7 chính hiệu).
+### 🌟 Về mình
+* 🎂 **Sinh năm:** 2007 
+* 🏠 **Sống tại:** Việt Nam.
+* 💻 **Sở thích:** thích code dạo và nghe nhạc.
+*"안녕하세요! 제 이름은 권입니다. 만나서 반가워요!"* (Xin chào, mình là Quyền. Rất vui được gặp bạn!)
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+Kết nối với mình qua Facebook ở dưới chân trang nhé! 👇

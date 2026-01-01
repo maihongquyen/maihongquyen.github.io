@@ -1,6 +1,11 @@
 ---
 layout: post
-title: Kế hoạch du học Hàn Quốc của mình
+title: Hành trình chinh phục giấc mơ du học Hàn Quốc
 ---
 
-"안녕하세요! 저는 MAI HONG QUYEN입니다. 저는 거미줄처럼 튼튼한 꿈을 가지고 한국 유학을 준비하고 있습니다. 제 여정을 함께 지켜봐 주세요!"
+Chào mọi người, mình là Quyền. Đây là bài viết đầu tiên mình chia sẻ về kế hoạch du học của mình.
+
+## Tại sao mình chọn Hàn Quốc?
+Mình rất thích văn hóa Hàn Quốc và đặc biệt là ngôn ngữ này. Mục tiêu của mình là đỗ vào trường **Đại học Sun Moon** (hoặc trường bạn thích).
+
+![Ảnh minh họa](/images/hquoc.jpg)
