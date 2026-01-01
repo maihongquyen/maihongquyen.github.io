@@ -361,3 +361,25 @@ header.site-header {
   padding-top: 40px !important;
   text-align: center !important;  /* Căn giữa tất cả */
 }
+/* --- CÀI ĐẶT HÌNH NỀN --- */
+
+body {
+  /* Dẫn link tới bức ảnh bạn vừa chép vào */
+  background-image: url('/images/bg.jpg');
+  
+  /* Căn chỉnh để ảnh luôn đẹp trên mọi màn hình */
+  background-size: cover;       /* Tự động co giãn ảnh cho vừa khít màn hình */
+  background-position: center;  /* Luôn lấy phần giữa của ảnh */
+  background-attachment: fixed; /* Hiệu ứng xịn: Ảnh đứng yên khi bạn cuộn trang */
+  background-repeat: no-repeat; /* Không lặp lại ảnh */
+}
+
+/* --- LÀM NỀN TRẮNG MỜ CHO CHỮ DỄ ĐỌC --- */
+/* Vì ảnh nền có thể làm chữ bị chìm, ta cần lót một lớp giấy trắng mờ bên dưới chữ */
+.wrapper {
+  background-color: rgba(255, 255, 255, 0.9); /* Màu trắng, độ trong suốt 90% */
+  padding: 30px;          /* Tạo khoảng cách giữa chữ và mép giấy */
+  border-radius: 15px;    /* Bo tròn các góc cho mềm mại */
+  margin-top: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2); /* Thêm bóng đổ cho nổi lên */
+}
