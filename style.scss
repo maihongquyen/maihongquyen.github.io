@@ -287,3 +287,37 @@ footer {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
+/* --- BẮT ĐẦU PHẦN CHỈNH SỬA CỦA QUYỀN --- */
+
+/* Tăng kích thước chữ cơ bản của toàn trang web */
+body {
+  font-size: 18px !important; /* Số càng lớn chữ càng to (mặc định thường là 16px) */
+}
+
+/* Làm cho tiêu đề bài viết to và đậm hơn */
+.post-title {
+  font-size: 2.5em !important; /* Tăng gấp 2.5 lần chữ bình thường */
+  font-weight: 800 !important; /* Siêu đậm */
+}
+
+/* Làm cho tên bạn trên đầu trang to hơn */
+.site-title {
+  font-size: 2em !important;
+}
+
+/* --- KẾT THÚC PHẦN CHỈNH SỬA --- */
+/* --- HIỆU ỨNG KHI DI CHUỘT (HOVER) --- */
+
+/* Hiệu ứng cho các đường link: đổi màu xanh lá khi di chuột vào */
+a:hover {
+  color: #2ecc71 !important; /* Mã màu xanh lá cây */
+  transition: color 0.3s ease; /* Chuyển màu mượt mà trong 0.3 giây */
+  text-decoration: none; /* Bỏ gạch chân */
+}
+
+/* Hiệu ứng cho ảnh đại diện và ảnh bài viết: Phóng to nhẹ khi di chuột */
+img:hover {
+  transform: scale(1.05); /* Phóng to 5% */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); /* Thêm bóng đổ cho nổi bật */
+  transition: all 0.3s ease-in-out; /* Chuyển động mượt mà */
+}
