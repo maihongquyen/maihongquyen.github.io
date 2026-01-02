@@ -401,3 +401,101 @@ img:hover {
   box-shadow: 0 15px 30px rgba(0,0,0,0.3); /* Bóng đổ đậm hơn tạo cảm giác 3D */
   cursor: pointer; /* Đổi con trỏ thành hình bàn tay */
 }
+/* --- GIAO DIỆN PIXEL ART (GAME STYLE) --- */
+
+/* 1. Nhập Font chữ "điện tử" từ Google */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+/* 2. Cài đặt màn hình đen */
+body {
+  background: #111 !important;     /* Nền đen */
+  color: #fff !important;          /* Chữ trắng */
+  font-family: 'VT323', monospace !important; /* Font chữ máy tính cũ */
+  font-size: 1.3em !important;
+  background-image: none !important; /* Tắt hình nền cũ đi */
+}
+
+/* 3. Chỉnh tiêu đề thành font Game */
+h1, h2, h3 {
+  font-family: 'Press Start 2P', cursive !important; /* Font tiêu đề to, vuông */
+  text-transform: uppercase;
+  color: #f1c40f !important; /* Màu vàng retro */
+  text-shadow: 3px 3px 0px #000;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+/* 4. Tạo cái khung cửa sổ (Window) giống trong ảnh */
+.pixel-window {
+  background: #2c3e50; /* Màu nền xám xanh của khung */
+  border: 4px solid #000; /* Viền đen dày */
+  margin-bottom: 30px;
+  box-shadow: 8px 8px 0px #000; /* Bóng đổ cứng, không mờ */
+  position: relative;
+}
+
+/* Thanh tiêu đề trên cùng của khung (USER_PROFILE.EXE) */
+.window-header {
+  background: #95a5a6;
+  padding: 8px 10px;
+  border-bottom: 4px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.window-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  color: #000;
+  font-weight: bold;
+}
+
+/* 3 nút màu đỏ vàng xanh giả lập nút tắt */
+.window-controls { display: flex; gap: 5px; }
+.dot { width: 10px; height: 10px; border: 2px solid #000; }
+.red { background: #ff5252; }
+.yellow { background: #ffb142; }
+
+/* Nội dung bên trong khung */
+.window-content {
+  padding: 20px;
+  text-align: center;
+}
+
+/* 5. Nút bấm (Button) phong cách Pixel */
+.pixel-btn {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  margin-top: 15px;
+  border: 3px solid #000;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  text-decoration: none !important;
+  color: #000 !important;
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.4);
+  transition: transform 0.1s;
+}
+
+/* Hiệu ứng khi bấm nút (lún xuống) */
+.pixel-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.4);
+}
+
+/* Màu các nút */
+.btn-orange { background: #ff9f43; } /* Nút cam */
+.btn-blue { background: #54a0ff; }   /* Nút xanh dương */
+.btn-green { background: #2ed573; }  /* Nút xanh lá */
+.btn-red { background: #ff4757; color: #fff !important;}    /* Nút đỏ (Donate) */
+
+/* Ảnh avatar pixel */
+.pixel-avatar {
+  width: 120px;
+  height: 120px;
+  border: 4px solid #fff;
+  box-shadow: 4px 4px 0px #000;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
