@@ -1,12 +1,18 @@
-<div style="text-align: center; margin: 30px 0; padding: 20px; border: 2px dashed #fff; border-radius: 15px;">
-  <h3>🚀 Mục tiêu: Du học Hàn Quốc</h3>
-  <p>Cố gắng mỗi ngày!</p>
-  <h1 id="countdown" style="font-size: 3em; color: #f1c40f; margin: 10px 0;">00 : 00 : 00</h1>
+---
+layout: default
+---
+
+<div style="text-align: center; margin-bottom: 40px; padding: 30px; background: rgba(255, 255, 255, 0.1); border-radius: 20px; border: 1px solid rgba(255,255,255,0.2);">
+  <h3 style="margin: 0; color: #ffeb3b; text-transform: uppercase; letter-spacing: 2px;">🇰🇷 Mục tiêu: Du học Hàn Quốc</h3>
+  <p style="color: #eee; margin-top: 5px;">Cố gắng mỗi ngày!</p>
+  
+  <div id="countdown" style="font-size: 2.5em; font-weight: bold; color: #fff; margin: 20px 0; text-shadow: 0 0 10px rgba(255,255,255,0.5);">
+    Loading...
+  </div>
 </div>
 
 <script>
-  // Đặt ngày mục tiêu (Ví dụ: 23/3/2026)
-  var targetDate = new Date("Sep 1, 2026 00:00:00").getTime();
+  var targetDate = new Date("September 1, 2026 00:00:00").getTime();
 
   var x = setInterval(function() {
     var now = new Date().getTime();
@@ -14,7 +20,22 @@
 
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     
     document.getElementById("countdown").innerHTML = days + " ngày " + hours + " giờ nữa";
   }, 1000);
 </script>
+
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}
+</div>
