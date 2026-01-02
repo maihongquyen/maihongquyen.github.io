@@ -14,40 +14,29 @@
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
-<div style="position: fixed; bottom: 20px; left: 20px; z-index: 9999; background: white; padding: 10px; border-radius: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 10px;">
-    <div id="disk-icon" style="animation: spin 3s linear infinite;">💿</div>
-    
-    <span style="font-size: 14px; font-weight: bold; color: #333;">Nhạc nền</span>
-
-    <audio id="myAudio" autoplay loop controls style="height: 30px; width: 200px;">
-        <source src="/music/nhac.mp3" type="audio/mpeg">
-        Trình duyệt của bạn không hỗ trợ phát nhạc.
-    </audio>
-</div>
+<audio id="myAudio" loop style="display:none">
+  <source src="/music/nhac.mp3" type="audio/mpeg">
+</audio>
 
 <script>
-    // Thử tự động phát nhạc
+  window.addEventListener('load', function() {
     var audio = document.getElementById("myAudio");
-    audio.volume = 0.5; // Chỉnh âm lượng 50% cho đỡ giật mình
-    
-    // Hàm xử lý lỗi nếu trình duyệt chặn autoplay
-    var playPromise = audio.play();
-    if (playPromise !== undefined) {
-        playPromise.then(_ => {
-            // Tự động phát thành công
-            console.log("Đang phát nhạc!");
-        })
-        .catch(error => {
-            // Bị chặn -> Không sao cả, người dùng sẽ tự bấm play
-            console.log("Autoplay bị chặn, cần bấm tay.");
-        });
-    }
-</script>
+    audio.volume = 0.5; // Chỉnh âm lượng 100%
 
-<style>
-    /* Hiệu ứng xoay tròn cho cái đĩa */
-    @keyframes spin { 100% { transform: rotate(360deg); } }
-</style>
+    // Cố gắng phát nhạc ngay lập tức
+    var promise = audio.play();
+
+    if (promise !== undefined) {
+      promise.catch(error => {
+        // Nếu trình duyệt chặn, chờ người dùng click chuột lần đầu sẽ phát
+        console.log("Chờ tương tác để phát nhạc...");
+        document.addEventListener('click', function() {
+          audio.play();
+        }, { once: true });
+      });
+    }
+  });
+</script>
   <body>
     <div class="wrapper-masthead">
       <div class="container">
